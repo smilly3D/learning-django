@@ -12,7 +12,7 @@ class Orders(models.Model):
         "products.Products", related_name="orders", through="orders.OrderProducts"
     )
 
-class OrderProducts(models.model):
+class OrderProducts(models.Model):
     register_uuid = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     order = models.ForeignKey("orders.Orders", on_delete=models.CASCADE)
     product = models.ForeignKey("products.Products", on_delete=models.CASCADE)
