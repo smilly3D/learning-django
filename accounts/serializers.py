@@ -7,3 +7,8 @@ class AccountsSerializer(serializers.Serializer):
     birthdate = serializers.DateField(required=False)
     account_balance = serializers.FloatField(required=False)
     password = serializers.CharField(write_only=True)
+
+
+class LoginSerializer(serializers.Serializer):
+    email = serializers.CharField()
+    password = serializers.CharField()
