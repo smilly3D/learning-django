@@ -1,6 +1,7 @@
 from uuid import uuid4
 from django.db import models
 
+
 class Accounts(models.Model):
     user_uuid = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     email = models.EmailField(unique=True)
