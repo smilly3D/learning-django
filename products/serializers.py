@@ -6,3 +6,7 @@ class ProductSerializer(serializers.Serializer):
     name = serializers.CharField()
     description = serializers.CharField(required=False)
     unit_value = serializers.FloatField()
+
+
+class DeleteProductSerializer(serializers.Serializer):
+    product_uuid = serializers.CharField()
