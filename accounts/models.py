@@ -10,6 +10,7 @@ class Accounts(AbstractUser):
     username = models.CharField(max_length=150, null=True)
     account_balance = models.FloatField(default=0)
     # password = models.CharField(max_length=255)
+    is_admin = models.BooleanField(default=False)
 
     USERNAME_FIELD: str = "email"
     REQUIRED_FIELDS: list[str] = []

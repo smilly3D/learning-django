@@ -6,6 +6,7 @@ class AccountsSerializer(serializers.Serializer):
     email = serializers.EmailField()
     birthdate = serializers.DateField(required=False)
     account_balance = serializers.FloatField(required=False)
+    is_admin = serializers.BooleanField(required=False)
     password = serializers.CharField(write_only=True)
 
 
