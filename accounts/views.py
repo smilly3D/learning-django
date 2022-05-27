@@ -6,7 +6,6 @@ from accounts.models import Accounts
 from accounts.serializers import AccountsSerializer, LoginSerializer
 from rest_framework.authtoken.models import Token
 
-from django.contrib.auth.hashers import check_password, make_password
 from django.contrib.auth import authenticate
 
 
